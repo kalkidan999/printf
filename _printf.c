@@ -24,6 +24,7 @@ switch(*p)
 {
 case '%': 
 count += putchar('%');
+break;
 case 'c' :
 i=va_arg(argp,int);
 count += putchar(i);
