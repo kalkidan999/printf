@@ -48,12 +48,12 @@ case 'd':
 i = va_arg(argp,int);
 if (i < 0)
   {
-       putc('-');
+       putchar('-');
        i = -i;
     }
     if (i > 9)
 _printf(i/10);
-count += putc('0'+ (i%10));
+count += putchar('0'+ (i%10));
 break;
 }
 }
