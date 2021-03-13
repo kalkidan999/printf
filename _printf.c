@@ -46,14 +46,14 @@ count += puts(s);
 break;
 case 'd':
 i = va_arg(argp,int);
-if (i < 0)
-  {
-       putchar('-');
-       i = -i;
-    }
-    if (i > 9)
-_printf(i/10);
-count += putchar('0'+ (i%10));
+if( i > 9 )
+      { 
+	int a = i / 10;
+        i -= 10 * a;
+        _printf(a);
+      }
+   count += putchar('0'+i);
+
 break;
 }
 }
