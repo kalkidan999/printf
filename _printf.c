@@ -5,27 +5,22 @@
  */
 int _printf(const char *format, ...)
 {
+char *p;
 int count;
-va_list args;
-va_start(args, format);
-while (*format != '\0')
+va_list argp;
+va_start(argp, format);
+if (format == NULL)
+return (-1);
+p=format;
+for(p=format; *p!='\0';p++)
 {
-if (*format == 'c')
+if(*p!='%')
 {
-int c = va_arg(args, int);
-return (c);
+count += _putchar(*p);
+continue;
 }
-else if (*format == 's')
-{
-int s = va_arg(args, int);
-return (s);
+p++;
 }
-else if (*format == '%')
-{
-int p = va_arg(args, int);
-return (p);
-}
-++format;
-}
-va_end(args);
+va_end(argp);
+return(count);
 }
