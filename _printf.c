@@ -6,13 +6,10 @@
 int _printf(const char *format, ...)
 {
 const char *p;
-int i;
-unsigned u;
-char *s;
 int count =0;
 va_list argp;
 va_start(argp, format);
-p=frmt;
+p=format;
 for(p=format; *p!='\0';p++)
 {
 if(*p!='%')
