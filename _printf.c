@@ -44,17 +44,6 @@ case 's':
 s=va_arg(argp,char *); 
 count += puts(s);
 break;
-case 'd':
-i = va_arg(argp,int);
-if( i > 9 )
-      { 
-	int a = i / 10;
-        i -= 10 * a;
-        putchar(a);
-      }
-   count += putchar('0'+i);
-
-break;
 }
 }
 va_end(argp);
