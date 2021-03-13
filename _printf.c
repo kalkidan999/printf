@@ -18,7 +18,7 @@ while (*p!='%')
 count += putchar(*p);
 p++;
 }
-p++;
+
 }
 va_end(argp);
 return(count);
