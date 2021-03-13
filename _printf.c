@@ -46,7 +46,7 @@ count += puts(s);
 break;
 case 'd':
 va_arg(argp,int);
-count += putchar(_strlen(s));
+count += putchar(_strlen(*s));
 break;
 }
 }
