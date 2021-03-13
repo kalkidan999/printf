@@ -11,7 +11,6 @@ va_list argp;
 va_start(argp, format);
 if (format == NULL)
 return (-1);
-p=format;
 for(p=format; *p!='\0';p++)
 {
 if(*p!='%')
