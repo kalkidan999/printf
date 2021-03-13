@@ -7,7 +7,7 @@ int _printf(const char *format, ...)
 {
 const char *p;
 int count =0;
-int i;
+int i, d;
 char *s;
 va_list argp;
 va_start(argp, format);
