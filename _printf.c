@@ -9,6 +9,7 @@ const char *p;
 int count;
 va_list argp;
 va_start(argp, format);
+p=format;
 for(p=format; *p!='\0';p++)
 {
 if(*p != '%')
