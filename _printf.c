@@ -13,10 +13,10 @@ if (format == NULL)
 return (-1);
 for(p=format; *p!='\0';p++)
 {
-if(*p!='%')
+while (*p!='%')
 {
 count += putchar(*p);
-continue;
+p++;
 }
 p++;
 }
