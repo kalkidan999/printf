@@ -50,7 +50,7 @@ if( i > 9 )
       { 
 	int a = i / 10;
         i -= 10 * a;
-        _printf(a);
+        putchar(a);
       }
    count += putchar('0'+i);
 
