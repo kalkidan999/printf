@@ -1,24 +1,17 @@
 #include "holberton.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <string.h>
 /**
  * _printf - prints anything
  * @format: list of types of arguments passed to the function
  */
 int _printf(const char *format, ...)
 {
-const char *p;
-int count;
-va_list argp;
-va_start(argp, format);
-p=format;
-for(p=format; *p!='\0';p++)
-{
-if(*p != '%')
-{
-count = _putchar(*p);
-continue;
-}
-p++;
-}
-va_end(argp);
-return(count);
+va_list args;
+int result;
+va_start (args, format);
+result = vfprintf (stdout, format, args);
+va_end (args);
+return result;
 }
