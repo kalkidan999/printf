@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (find_value(format[i]) == NULL)
+			if (find_value(format[i]) = NULL)
 			{
 				_putchar('%');
 				_putchar(format[i]);
