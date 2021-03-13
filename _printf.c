@@ -15,7 +15,7 @@ for(p=format; *p!='\0';p++)
 {
 if(*p!='%')
 {
-count += _putchar(*p);
+count += putchar(*p);
 continue;
 }
 p++;
