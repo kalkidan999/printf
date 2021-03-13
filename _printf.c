@@ -22,6 +22,13 @@ switch(*p)
 {
 case '%': 
 count += putchar('%');
+case 'c' :
+i=va_arg(argp,int);
+count += putchar(i);
+break;
+case 's':
+s=va_arg(argp,char *); 
+count += puts(s);
 break;
 }
 }
