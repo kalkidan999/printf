@@ -19,6 +19,20 @@ count += _putchar(*p);
 continue;
 }
 p++;
+switch(*p)
+{
+case 'c' : 
+    i=va_arg(argp,int);
+    putchar(i);
+    break;
+case 'd' : 
+    i=va_arg(argp,int);
+putchar('d');
+    break;
+case '%':
+    putchar('%');
+    break;
+}
 }
 va_end(argp);
 return(count);
