@@ -3,6 +3,17 @@
  * _printf - prints anything
  * @format: list of types of arguments passed to the function
  */
+int _strlen(char *s)
+{
+int count;
+while (*s != '\0')
+{
+count++;
+s++;
+}
+return (count);
+}
+
 int _printf(const char *format, ...)
 {
 const char *p;
@@ -25,10 +36,6 @@ switch(*p)
 case '%': 
 count += putchar('%');
 break;
-case 'd': 
-d =va_arg(argp,int);
-count += putchar(10);
-break;
 case '%': 
 count += putchar('%');
 break;
@@ -39,6 +46,9 @@ break;
 case 's':
 s=va_arg(argp,char *); 
 count += puts(s);
+break;
+case 'd': 
+count += putchar(_strlen(s));
 break;
 }
 }
