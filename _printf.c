@@ -22,6 +22,8 @@ int i;
 char *s;
 va_list argp;
 va_start(argp, format);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 p=format;
 for(p=format; *p!='\0';p++)
 {
