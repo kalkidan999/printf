@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 {
 const char *p;
 int count =0;
-int i, d;
+int i;
 char *s;
 va_list argp;
 va_start(argp, format);
@@ -45,7 +45,7 @@ s=va_arg(argp,char *);
 count += puts(s);
 break;
 case 'd':
-d = va_arg(argp,int);
+va_arg(argp,int);
 count += putchar(_strlen(s));
 break;
 }
