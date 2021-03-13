@@ -45,8 +45,15 @@ s=va_arg(argp,char *);
 count += puts(s);
 break;
 case 'd':
-va_arg(argp,int);
-count += putchar(_strlen(*s));
+i = va_arg(argp,int);
+if (i < 0)
+  {
+       putc('-');
+       i = -i;
+    }
+    if (i > 9)
+_printf(i/10);
+count += putc('0'+ (i%10));
 break;
 }
 }
