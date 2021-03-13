@@ -6,7 +6,7 @@
 int _printf(const char *format, ...)
 {
 const char *p;
-int count;
+int count = 0;
 va_list argp;
 va_start(argp, format);
 if (format == NULL)
