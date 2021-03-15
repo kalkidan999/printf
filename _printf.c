@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 	char *s;
 	va_list list;
 	flags flags_t[] = {
+		{"%", print_percent},
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
