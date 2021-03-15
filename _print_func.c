@@ -36,7 +36,7 @@ char *print_s(va_list list)
  * @list: va_list
  * Return: 1
  */
-int *print_percent(__attribute__((unused))valist list)
+int *print_percent(__attribute__((unused))va_list list)
 {
 	_putchar('%');
 	return (1);
