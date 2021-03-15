@@ -12,36 +12,23 @@
 int _printf(const char *format, ...)
 {
 	char *create_buff;
-	int i;
-	int j;
+	int i, j;
 	int b_len = 0;
 	char *s;
 	va_list list;
 	flags flags_t[] = {
-		{"%", print_percent},
-		{"c", print_c},
-		{"s", print_s},
-		{"i", print_i},
-		{"d", print_i},
-		{"u", print_u},
-		{"b", print_bin},
-		{"o", print_oct},
-		{"r", print_r},
-		{"X", print_hex},
-		{"x", print_hex_low},
-		{"R", rot13},
-		{NULL, NULL}
+{"%", print_percent}, {"c", print_c}, {"s", print_s},
+{"i", print_i}, {"d", print_i}, {"u", print_u},
+{"b", print_bin}, {"o", print_oct}, {"r", print_r},
+{"X", print_hex}, {"x", print_hex_low}, {"R", rot13}, {NULL, NULL}
 	};
-
 	create_buff = malloc(1024 * sizeof(char));
 	if (create_buff == NULL)
 	{
 		free(create_buff);
 		return (-1);
 	}
-
 	va_start(list, format);
-
 	if (format == NULL || list == NULL)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
