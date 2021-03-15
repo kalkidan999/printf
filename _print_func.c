@@ -7,7 +7,7 @@
  * @list: va_list
  * Return: string
  */
-int print_char(va_list l, flags_t *f)
+int print_c(va_list l, flags_t *f)
 {
 	(void)f;
 	_putchar(va_arg(l, int));
