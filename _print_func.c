@@ -8,13 +8,14 @@
  * @list: va_list
  * Return: string
  */
-int *print_c(va_list arg)
+char *print_c(va_list list)
 {
-	int i;
+	static char s[2] = {0, '\0'};
 
-	i = va_arg(arg, int);
-	putchar(i);
-	return (1);
+	s[0] = va_arg(list, int);
+	if (s[0] == '\0')
+		return (" ");
+	return (s);
 }
 /**
  * print_s - print string
