@@ -31,3 +31,13 @@ char *print_s(va_list list)
 		return (s = "(null)");
 	return (s);
 }
+/**
+ * print_percent - print percent
+ * @list: va_list
+ * Return: 1
+ */
+int *print_percent(__attribute__((unused))valist list)
+{
+	_putchar('%');
+	return (1);
+}
