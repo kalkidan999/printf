@@ -18,7 +18,6 @@ typedef struct print_flags flags;
 int _printf(const char *format, ...);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src, int n);
-ch
 int *print_percent(va_list list);
 char *print_c(va_list list);
 char *print_s(va_list list);
