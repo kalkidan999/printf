@@ -7,14 +7,11 @@
  * @list: va_list
  * Return: string
  */
-char *print_c(va_list list)
+int print_char(va_list l, flags_t *f)
 {
-	static char s[2] = {0, '\0'};
-
-	s[0] = va_arg(list, int);
-	if (s[0] == '\0')
-		return (" ");
-	return (s);
+	(void)f;
+	_putchar(va_arg(l, int));
+	return (1);
 }
 /**
  * print_s - print string
