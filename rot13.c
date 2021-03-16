@@ -12,7 +12,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 	int i = 0;
 	int count = 0;
 	char *s = va_arg(list, char *);
-	char *s_cpy;
+
 
 
 
