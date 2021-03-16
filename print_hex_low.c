@@ -30,9 +30,7 @@ while (num != 0)
 		tmp = 0;
 		tmp = num % 16;
 
-		if (tmp < 10)
-		{
-
+		if (t
 			i++;
 		}
 else
