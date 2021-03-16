@@ -36,7 +36,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 		}
 		i++;
 		}
-	s_cpy[i] = '\0';
+
 
 
 }
