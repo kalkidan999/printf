@@ -33,9 +33,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 				s_cpy[i] = rot13[count];
 				break;
 			}
-		}
-		i++;
-		}
+		
 
 
 
