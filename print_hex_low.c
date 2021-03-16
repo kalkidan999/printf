@@ -30,9 +30,7 @@ while (num != 0)
 		tmp = 0;
 		tmp = num % 16;
 
-		i
-else
-		{
+
 			output[i] = tmp + 87;
 			i++;
 		}
