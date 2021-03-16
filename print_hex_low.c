@@ -13,8 +13,4 @@ char *print_hex_low(va_list list)
 int len = _numlen(num);
 
 	output = malloc(sizeof(char) * len + 1);
-	if (output == NULL)
-	{
-		free(output);
-		return (0);
-	
+	if (output 
