@@ -7,5 +7,22 @@
  */
 char *rot13(va_list list)
 {
+char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
+	char rot13[] = " NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i = 0;
+	int count = 0;
+	char *s = va_arg(list, char *);
+	char *s_cpy;
+
+	if (s == NULL)
+		return (NULL);
+
+	s_cpy = malloc(sizeof(char) * (_strlen(s) + 1));
+
+	if (s_cpy == NULL)
+	{
+		free(s_cpy);
+		return (NULL);
+	}
 
 }
