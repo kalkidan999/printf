@@ -17,7 +17,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 	if (s == NULL)
 		return (NULL);
 
-	s_cpy = malloc(sizeof(char) * (_strlen(s) + 1));
+
 
 	
 	
