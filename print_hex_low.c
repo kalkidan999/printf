@@ -17,9 +17,4 @@ int len = _numlen(num);
 	{
 		free(output);
 		return (0);
-	}
-
-if (num == 0)
-	{
-		output[0] = '0';
-		outpu
+	
