@@ -43,5 +43,5 @@ else
 num = num / 16;
 	}
 
-	rev_string(output);
+
 
