@@ -4,6 +4,4 @@
  * @list: list
  * Return: pointer to string
  */
-char *print_hex_low(va_list list)
-{
- 
+
