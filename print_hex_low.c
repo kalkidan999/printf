@@ -10,3 +10,6 @@ char *print_hex_low(va_list list)
 	char *output;
 	int i = 0;
 	int tmp;
+int len = _numlen(num);
+
+	output = malloc(sizeof(char) * len + 1);
