@@ -19,3 +19,9 @@ int len = _numlen(num);
 		return (0);
 	}
 
+if (num == 0)
+	{
+		output[0] = '0';
+		output[1] = '\0';
+		return (output);
+		}
