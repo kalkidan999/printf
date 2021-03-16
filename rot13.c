@@ -15,7 +15,6 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 	char *s_cpy;
 
 	if (s == NULL)
-		return (NULL);
 
 
 
