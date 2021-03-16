@@ -46,5 +46,4 @@ num = num / 16;
 	rev_string(output);
 	output[i] = '\0';
 
-	return (output);
-
+	
