@@ -46,20 +46,20 @@ int print_bigS(va_list l, flags_t *f)
  */
 int print_rev(va_list l, flags_t *f)
 {
-	int i = 0, j;
-	char *s = va_arg(l, char *);
-
+	char *str;
+	int i, count = 0;
 	(void)f;
-	if (!s)
-		s = "(null)";
-
-	while (s[i])
-		i++;
-
-	for (j = i - 1; j >= 0; j--)
-		_putchar(s[j]);
-
-	return (i);
+	str = va_arg(r, char *);
+	if (str == NULL)
+		str = ")llun(";
+	for (i = 0; str[i]; i++)
+		;
+	for (i -= 1; i >= 0; i--)
+	{
+		_putchar(str[i]);
+		count++;
+	}
+	return (count);
 }
 
 /**
