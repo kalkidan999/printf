@@ -5,3 +5,7 @@
  * @list: argument passed
  * Return: pointer to rot13 string
  */
+char *rot13(va_list list)
+{
+
+}
