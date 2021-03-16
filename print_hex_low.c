@@ -28,8 +28,4 @@ if (num == 0)
 while (num != 0)
 	{
 		tmp = 0;
-		tmp = num % 16;
-
-
-	
-		}
+		tmp = num
