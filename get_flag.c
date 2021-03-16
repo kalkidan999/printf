@@ -23,6 +23,10 @@ case '#':
 f->hash = 1;
 i = 1;
 break;
+case '0':
+f->zeroo = 1;
+i = 1;
+break;
 }
 return (i);
 }
