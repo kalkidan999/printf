@@ -32,7 +32,7 @@ while (num != 0)
 
 		if (tmp < 10)
 		{
-output[i] = tmp + 48;
+
 			i++;
 		}
 else
