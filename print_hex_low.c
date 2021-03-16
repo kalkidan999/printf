@@ -40,4 +40,3 @@ else
 			output[i] = tmp + 87;
 			i++;
 		}
-num = num / 16
