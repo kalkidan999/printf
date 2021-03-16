@@ -35,3 +35,8 @@ while (num != 0)
 output[i] = tmp + 48;
 			i++;
 		}
+else
+		{
+			output[i] = tmp + 87;
+			i++;
+		}
