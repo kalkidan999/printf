@@ -24,5 +24,11 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 		free(s_cpy);
 		return (NULL);
 	}
+	while (s[i] != '\0')
+	{
+		for (count = 0; alpha[count] != '\0'; count++)
+		{
+			if (s[i] == alpha[count])
+			{
 
 }
