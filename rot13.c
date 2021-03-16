@@ -14,7 +14,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 	char *s = va_arg(list, char *);
 	char *s_cpy;
 
-	if (s == NULL)
+
 
 
 
