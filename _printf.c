@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <unistd.h>
-#include <string.h>
 #include "holberton.h"
 /**
  * _printf - printf function
@@ -11,63 +6,38 @@
  */
 int _printf(const char *format, ...)
 {
-	char *create_buff;
-	int i, j;
-	int b_len = 0;
-	char *s;
-	va_list list;
-	flags flags_t[] = {
-{"%", print_percent}, {"c", print_c}, {"s", print_s},
-{"i", print_i}, {"d", print_i}, {"u", print_u},
-{"b", print_bin}, {"o", print_oct}, {"r", print_r},
-{"X", print_hex}, {"x", print_hex_low}, {"R", rot13}, {NULL, NULL}
-	};
-	create_buff = malloc(1024 * sizeof(char));
-	if (create_buff == NULL)
-	{
-		free(create_buff);
+	int (*pfunc)(va_list, flags_t *);
+	const char *p;
+	va_list arguments;
+	flags_t flags = {0, 0, 0};
+
+	register int count = 0;
+
+	va_start(arguments, format);
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	}
-	va_start(list, format);
-	if (format == NULL || list == NULL)
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	for (p = format; *p; p++)
 	{
-		if (format[i] == '%' && format[i + 1] == '%')
-			continue;
-		else if (format[i] == '%')
+		if (*p == '%')
 		{
-			if (format[i + 1] == ' ')
-				i += return_position(format, i);
-			for (j = 0; flags_t[j].f != NULL; j++)
+			p++;
+			if (*p == '%')
 			{
-				if (format[i + 1] == *(flags_t[j].c))
-				{
-					s = flags_t[j].f(list);
-					if (s == NULL)
-						return (-1);
-					_strlen(s);
-					_strcat(create_buff, s, b_len);
-					b_len += _strlen(s);
-					i++;
-					break;
-				}
+				count += _putchar('%');
+				continue;
 			}
-			if (flags_t[j].f == NULL)
-			{
-				create_buff[b_len] = format[i];
-				b_len++;
-			}
-		}
-		else
-		{
-			create_buff[b_len] = format[i];
-			b_len++;
-		}
+			while (get_flag(*p, &flags))
+				p++;
+			pfunc = get_print(*p);
+			count += (pfunc)
+				? pfunc(arguments, &flags)
+				: _printf("%%%c", *p);
+		} else
+			count += _putchar(*p);
 	}
-	create_buff[b_len] = '\0';
-	write(1, create_buff, b_len);
-	va_end(list);
-	free(create_buff);
-	return (b_len);
+	_putchar(-1);
+	va_end(arguments);
+	return (count);
 }
