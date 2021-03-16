@@ -6,4 +6,4 @@
  */
 char *print_hex_low(va_list list)
 {
-  unsigned int num = va_arg(l
+ 
