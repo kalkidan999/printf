@@ -1,3 +1,3 @@
 #include "holberton.h"
 /**
- * print
+ * pri
