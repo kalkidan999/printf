@@ -30,5 +30,13 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 		{
 			if (s[i] == alpha[count])
 			{
+				s_cpy[i] = rot13[count];
+				break;
+			}
+		}
+		i++;
+		}
+	s_cpy[i] = '\0';
+	return (s_cpy);
 
 }
