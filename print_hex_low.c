@@ -25,3 +25,10 @@ if (num == 0)
 		output[1] = '\0';
 		return (output);
 		}
+while (num != 0)
+	{
+		tmp = 0;
+		tmp = num % 16;
+
+		if (tmp < 10)
+		{
