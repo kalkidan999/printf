@@ -31,6 +31,5 @@ while (num != 0)
 		tmp = num % 16;
 
 
-			output[i] = tmp + 87;
-		
+	
 		}
