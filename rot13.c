@@ -11,7 +11,7 @@ char alpha[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzq";
 	char rot13[] = " NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i = 0;
 	int count = 0;
-	char *s = va_arg(list, char *);
+
 
 
 
