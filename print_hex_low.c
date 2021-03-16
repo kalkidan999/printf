@@ -22,6 +22,4 @@ int len = _numlen(num);
 if (num == 0)
 	{
 		output[0] = '0';
-		output[1] = '\0';
-		return (output);
-		}
+		outpu
