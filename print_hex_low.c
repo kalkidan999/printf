@@ -47,4 +47,4 @@ num = num / 16;
 	output[i] = '\0';
 
 	return (output);
-}
+
